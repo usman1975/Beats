@@ -1,3 +1,10 @@
-// .benefits-section {
-//     background: url(../../img/decor/triangle.png) left 10% bottom -3% no-repeat;
-// }
+.benefits-section {
+    position: relative;
+    &::before {
+        content: url("../img/decor/triangle.png");  
+        position: absolute;
+        left: 10%;
+        bottom: -2.4%;
+        z-index: 10;
+    }
+}

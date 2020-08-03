@@ -1,9 +1,22 @@
 .hero {
+    position: relative;
     height: 100vh;
     min-height: 652px;
-    background: url('../../img/beats.png') right 8% bottom 30% no-repeat;
+    background: url('../img/beats.png') right 8% bottom 30% no-repeat;
     background-color:#F5F5F5;
     color: #292929;
+    &::after {
+        content: "";
+        display: block;
+        width: 46px;
+        height: 10px;
+        background: #C4C4C4;
+        transform: rotate(-45deg);
+        position: absolute;
+        // top: 0;
+        right: 10%;
+        bottom: -5px;
+    }
 }
 
 .hero__container {

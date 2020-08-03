@@ -67,11 +67,23 @@ img {
 }
 
 .hero {
+  position: relative;
   height: 100vh;
   min-height: 652px;
-  background: url("../../img/beats.png") right 8% bottom 30% no-repeat;
+  background: url("../img/beats.png") right 8% bottom 30% no-repeat;
   background-color: #F5F5F5;
   color: #292929;
+}
+.hero::after {
+  content: "";
+  display: block;
+  width: 46px;
+  height: 10px;
+  background: #C4C4C4;
+  transform: rotate(-45deg);
+  position: absolute;
+  right: 10%;
+  bottom: -5px;
 }
 
 .hero__container {
@@ -288,8 +300,30 @@ img {
   padding: 0 3%;
 }
 
+.benefits-section {
+  position: relative;
+}
+.benefits-section::before {
+  content: url("../img/decor/triangle.png");
+  position: absolute;
+  left: 10%;
+  bottom: -2.4%;
+  z-index: 10;
+}
+
 .reviews-section {
   background: #FFFFFF;
+  position: relative;
+}
+.reviews-section::after {
+  content: "";
+  width: 35px;
+  height: 35px;
+  background: #868686;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -2%;
+  left: 15%;
 }
 
 .reviews__display {
