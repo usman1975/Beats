@@ -1,0 +1,32 @@
+.section {
+    display: flex;
+    height: 100vh;
+    min-height: 650px;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.section__title {
+    font-weight: bold;
+    font-size: 48px;
+    margin-bottom: 53px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #292929;
+}
+
+.headline {
+    text-align: center;
+    margin-bottom: 62px;
+}
+
+.headline__title {
+    margin-bottom: 18px;
+}
+
+.headline__subtitle {
+    font-weight: normal;
+    line-height: 1.18;
+    padding: 0 22%;
+}

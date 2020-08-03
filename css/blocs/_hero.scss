@@ -1,0 +1,38 @@
+.hero {
+    height: 100vh;
+    min-height: 652px;
+    background: url('../../img/beats.png') right 8% bottom 30% no-repeat;
+    background-color:#F5F5F5;
+    color: #292929;
+}
+
+.hero__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 30px 0 70px 0;
+}
+
+.hero__title-section {
+    width: 40%;
+}
+
+.hero__main_title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 1.08;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.hero__title_desc {   
+    font-family: Alegreya Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 1.2;
+    padding-right: 10%;
+    margin-bottom: 36px;
+}

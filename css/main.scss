@@ -1,0 +1,22 @@
+$containerWidth: 940px;
+$baseFontSize: 16px;
+$z-fixed-menu: fixed;
+
+@import "layout";
+
+//blocs
+@import "blocs/hero";
+@import "blocs/header";
+@import "blocs/features";
+@import "blocs/feauture";
+@import "blocs/btn";
+@import "blocs/section";
+@import "blocs/benefits";
+@import "blocs/benefits-section";
+@import "blocs/reviews";
+@import "blocs/ineractive-avatar";
+@import "blocs/form";
+@import "blocs/order-section";
+@import "blocs/radio";
+@import "blocs/fixed-menu";
+
