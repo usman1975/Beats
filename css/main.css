@@ -234,7 +234,7 @@ img {
   padding: 0 3%;
 }
 .benefits__item::before {
-  content: url("../../img/separator.png");
+  content: url("../img/separator.png");
   position: absolute;
   top: 30px;
   right: 0;
@@ -444,8 +444,8 @@ img {
 
 .order-section {
   color: #FFFFFF;
-  background: url("../../img/decor/bg-form.png") 100% 100% no-repeat;
   background-color: #181818;
+  background: url("../img/decor/bg-form.png") 100% 100% no-repeat;
   background-size: cover;
 }
 
@@ -465,7 +465,7 @@ img {
   border-radius: 0;
 }
 .radio--checkbox .radio__visible::before {
-  background: url("../../img/icons/tick.png") center center no-repeat;
+  background: url("../img/icons/tick.png") center center no-repeat;
 }
 .radio:last-child {
   margin-right: 0;
