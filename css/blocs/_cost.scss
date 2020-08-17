@@ -1,0 +1,14 @@
+.cost {
+    display: flex;
+    @include  tablets{
+      width: 100%;
+      justify-content: center;
+  }
+}
+
+.cost__value {
+    margin-right: rem(12px);
+    font-size: rem(36px);
+    text-transform: uppercase;
+    color: #151515;
+}

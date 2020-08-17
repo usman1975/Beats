@@ -1,4 +1,6 @@
 .order-section {
+    height: 100vh;
+    padding-top: rem(2px);
     color: #FFFFFF;
     background-color: #181818;
     background: url("../img/decor/bg-form.png") 100% 100% no-repeat;
@@ -6,5 +8,11 @@
 }
 
 .order-section-title {
+    margin-top: rem(66px);
+    margin-bottom: 30px;
     color: #FFFFFF;
+    font-size: 48px;
+    @include tablets {
+        margin-top: 10px;
+    }
 }

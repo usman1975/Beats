@@ -1,0 +1,20 @@
+.specifacations {
+    display: flex;
+    margin-bottom: rem(24px);
+    @include  tablets {
+      width: 100%;
+      justify-content: center;
+}
+}
+.specifacations__item {
+  margin-right: rem(86px);
+  &:last-child {
+      margin-right: 0;
+  }
+}
+
+.specifacations__value {
+  font-weight: bold;
+  font-size: rem(18px);
+  color: #000000;
+}

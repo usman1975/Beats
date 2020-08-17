@@ -2,6 +2,11 @@ $containerWidth: 940px;
 $baseFontSize: 16px;
 $z-fixed-menu: fixed;
 
+//breakpoits
+$tablets: 768px;
+$phones: 480px;
+
+@import "media";
 @import "layout";
 
 //blocs
@@ -19,4 +24,13 @@ $z-fixed-menu: fixed;
 @import "blocs/order-section";
 @import "blocs/radio";
 @import "blocs/fixed-menu";
+@import "blocs/humburger";
+@import "blocs/contacts";
+@import "blocs/slider";
+@import "blocs/gear";
+@import "blocs/specifacations";
+@import "blocs/cost";
+@import "blocs/mobal-menu";
+
+
 

@@ -1,21 +1,25 @@
 .hero {
     position: relative;
     height: 100vh;
-    min-height: 652px;
-    background: url('../img/beats.png') right 8% bottom 30% no-repeat;
+    min-height: 40.75rem;
+    background: url('../img/beats.png') right 8% bottom 30%  no-repeat;
     background-color:#F5F5F5;
     color: #292929;
     &::after {
         content: "";
         display: block;
-        width: 46px;
-        height: 10px;
+        width: 2.875rem;
+        height: 0.625rem;
         background: #C4C4C4;
         transform: rotate(-45deg);
         position: absolute;
-        // top: 0;
         right: 10%;
-        bottom: -5px;
+        bottom: -0.375rem;
+    }
+
+    @include tablets {
+        background: url('../img/beats-sm.png') center top 12%  no-repeat;
+        background-color:#F5F5F5;
     }
 }
 
@@ -24,28 +28,69 @@
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    padding: 30px 0 70px 0;
+    // padding: 1.875rem 0 4.375rem 0;
 }
 
 .hero__title-section {
     width: 40%;
+    @include tablets {
+        margin-top: 36%;
+        width: 100%;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    @include phones {
+        margin-top: 48%;
+    }
 }
 
 .hero__main_title {
+    
     font-style: normal;
     font-weight: bold;
-    font-size: 48px;
+    font-size: 3rem;
     line-height: 1.08;
     text-transform: uppercase;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
+    @include tablets {
+        padding: 0 6%;
+        margin-bottom: rem(12px);
+        font-size: rem(48px);
+    }
+
+    @include phones {
+        font-size: rem(32px);
+        padding: 0 13%;
+    }
 }
 
-.hero__title_desc {   
+.hero__title_desc { 
     font-family: Alegreya Sans;
     font-style: normal;
     font-weight: normal;
-    font-size: 21px;
+    font-size: 1.3125rem;
     line-height: 1.2;
     padding-right: 10%;
-    margin-bottom: 36px;
+    margin-bottom: 2.25rem;
+
+    @include tablets {
+        padding: 0 27%;
+        margin-bottom: rem(16px);
+        }
+
+    @include phones {
+        padding: 0 10%;
+        margin-bottom: 1.5rem;
+        }    
+}
+
+.hero__icons_section {
+    @include tablets {
+        display: none;
+    }
 }

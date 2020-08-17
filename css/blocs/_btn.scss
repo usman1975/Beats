@@ -1,14 +1,21 @@
 .btn {
-    padding: 18px 41px;
+    padding: 1.125rem 2.5rem;
     font-weight: bold;
     color: #FFFFFF;
     background: #E01F3D;
-    border-radius: 100px;
+    border-radius: 6.25rem;
     text-decoration: none;
     text-transform: uppercase;
     line-height: 1;
     border: none;
     overflow: hidden;
+    &:hover {
+        background: lighten(#E01F3D, 10%); 
+    }
+
+    &:active {
+        background: darken(#E01F3D, 10%);
+    }
 }
 
 .btn-theme-transparent {
@@ -17,4 +24,9 @@
 
 .form-btn:focus {
     outline: none;
+}
+
+.form-btn-reset:hover {
+    background: none;
+    color: #E01F3D;
 }

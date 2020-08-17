@@ -1,9 +1,10 @@
 .features {
     display: flex;
+    margin-top: rem(70px);
 }
 
 .features__item {
-    margin-right: 25px;
+    margin-right: 1.5rem;
     &:last-child {
         margin-right: 0;
     }

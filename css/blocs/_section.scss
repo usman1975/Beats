@@ -1,28 +1,41 @@
 .section {
-    display: flex;
     height: 100vh;
-    min-height: 650px;
-    flex-direction: column;
-    justify-content: center;
-
+    min-height: 40.625rem;
+    @include phones {
+        font-size: rem(14px);
+    }
 }
+
+.container-reviews {
+    padding-top: rem(64px);
+}
+
 
 .section__title {
     font-weight: bold;
-    font-size: 48px;
-    margin-bottom: 53px;
+    font-size: 3rem;
+    margin-bottom: 3.375rem;
     text-transform: uppercase;
     text-align: center;
     color: #292929;
+    @include phones {
+        margin-top: rem(32px);
+        font-size: rem(28px);  
+    }
 }
 
 .headline {
     text-align: center;
-    margin-bottom: 62px;
+    margin-top: rem(100px);
+    margin-bottom: 3.875rem;
+    @include phones {
+       margin-bottom: rem(40px);
+       margin-top: rem(36px);
+    }
 }
 
 .headline__title {
-    margin-bottom: 18px;
+    margin-bottom: 1.125rem;
 }
 
 .headline__subtitle {

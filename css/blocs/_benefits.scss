@@ -1,5 +1,8 @@
 .benefits {
     display: flex;
+    @include phones {
+        flex-direction: column;
+    }
 }
 
 .benefits__item {
@@ -9,13 +12,20 @@
     &::before {
         content: url("../img/separator.png");
         position: absolute;
-        top: 30px;
+        top: 1.87rem;
         right: 0;
         transform: translateX(50%);
+
+        @include phones {
+            display: none;
+        }
     }
 
     &:first-child {
         padding-left: 0;
+        @include phones {
+            padding-left: 3%;
+        }
     }
 
     &:last-child {
@@ -23,22 +33,44 @@
         &::before {
             display: none;
         }
+        @include phones {
+            padding-right: 3%;
+        }
+    }
+
+    @include phones {
+        display: flex;
+        padding: 0 3%;  
+        margin-bottom: rem(20px); 
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 }
 
 
 .benefit {
     text-align: center;
+    @include phones {
+        text-align: left;;
+    }
 }
 
 .benefit__image {
-    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
+    @include phones {
+        margin-right: rem(18px); 
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
 }
 
 .benefit__image-wrapper {
     display: inline-block;
-    width: 128px;
-    height: 128px;
+    width: 8rem;
+    height: 8rem;
     position: relative;
     background: #F2F5F4;
     border-radius: 50%;
@@ -47,20 +79,35 @@
 
 .benenit__icon {
     position: absolute;
-    width: 34px;
-    height: 60px;
+    width: 4rem;
+    height: 4.3rem;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    fill: black;
+}
+
+.benefit__text {
+    @include phones {
+        padding: 3% 0;
+    }
 }
 
 .benefit__title {
     font-weight: bold;
-    font-size: 24px;
+    font-size: 1.5rem;
     color: #292929;
-    margin-bottom: 7px;
+    margin-bottom: 0.5rem;
+    @include phones {
+        font-size: rem(24px);
+    }
+    
 }
 
 .benefit__desc {
     padding: 0 3%;
+    @include phones {
+        padding: 0;
+        padding-right: 12%;
+    }
 }

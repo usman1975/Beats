@@ -6,5 +6,8 @@
         left: 10%;
         bottom: -2.4%;
         z-index: 10;
+        @include phones {
+            bottom: -19.5%;
+        }
     }
 }

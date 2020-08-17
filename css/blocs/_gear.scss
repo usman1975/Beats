@@ -1,0 +1,55 @@
+.gear {
+    display: flex;
+    margin-bottom: rem(24px);
+}
+
+.gear__img {
+    position: relative;
+    width: rem(90px);
+    height: rem(90px);
+    background: #9A9A9A;
+    border-radius: 4px;
+   
+    &:hover  {
+        & + .gear__list {
+            display: block;
+            transition: 0.3s;
+        }
+    }
+    @include tablets {
+        display: none;;
+    } 
+}
+
+.gear__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  
+}
+
+
+
+.gear__list {
+    position: absolute;
+    right: 24.3%;
+    display: none;   
+    z-index: 1;
+}
+
+.gear__table {
+    padding: 15px;
+    background: #d5d5d5;
+    box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.06);
+    backdrop-filter: blur(40px);
+    color: #000000;
+    td {
+        padding: 10px;
+        padding-left: 15px;
+        padding-right: 0;
+      }
+}
+
+
+
+ 
