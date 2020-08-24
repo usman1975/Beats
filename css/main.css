@@ -537,6 +537,27 @@ section {
   transform: translateX(-50%);
 }
 
+.reviews__list {
+  position: relative;
+  min-height: 17.5rem;
+}
+
+.reviews__item.active {
+  position: static;
+  opacity: 1;
+  pointer-events: unset;
+}
+
+.reviews__item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.3s;
+  opacity: 0;
+}
+
 .reviews__display-inner {
   display: flex;
 }
@@ -581,17 +602,6 @@ section {
 .reviews__text {
   margin-bottom: 2.375rem;
 }
-.reviews__text p:last-child {
-  display: none;
-}
-@media screen and (max-width: 768px) {
-  .reviews__text p:first-child {
-    display: none;
-  }
-  .reviews__text p:last-child {
-    display: block;
-  }
-}
 
 .reviews__author {
   font-weight: bold;
@@ -603,16 +613,30 @@ section {
   margin-left: 2.5rem;
 }
 
-.reviews__switcher {
+.reviews-switcher {
   display: flex;
   justify-content: center;
   margin: 0 auto;
 }
-.reviews__switcher-item {
+.reviews-switcher-item {
   margin-right: 6px;
 }
-.reviews__switcher-item:last-child {
+.reviews-switcher-item:last-child {
   margin-right: 0;
+}
+
+.reviews-switcher__item.ineractive-avatar-active {
+  background-color: #E01F3D;
+}
+
+.reviews-switcher__item {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 6px solid transparent;
+  position: relative;
+  cursor: pointer;
 }
 
 .ineractive-avatar {
@@ -1269,4 +1293,59 @@ section {
   padding: 1.9375rem 2.375rem;
   font-size: 1rem;
   color: #fff;
+}
+
+.team {
+  display: flex;
+  justify-content: center;
+  padding: 0 80px;
+}
+
+.team__item {
+  width: 220px;
+  margin-right: 20px;
+}
+.team__item:last-child {
+  margin-right: 0;
+}
+
+.team__member {
+  margin-bottom: 1.5625rem;
+}
+
+.team__content-block {
+  text-align: center;
+}
+
+.team__content-text {
+  padding: 0 22%;
+}
+
+.team__title {
+  display: flex;
+  width: 180px;
+  margin: 0 auto;
+  position: relative;
+  border: none;
+  cursor: pointer;
+  background: #fff;
+  text-align: center;
+}
+
+.button__text {
+  display: inline-block;
+  width: 100%;
+}
+.button__text::after {
+  content: "";
+  display: inline-block;
+  margin-left: 6px;
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-bottom: 5px solid #E01F3D;
+}
+
+.team--version--mobile {
+  display: none;
 }
