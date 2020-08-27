@@ -1,23 +1,69 @@
+.container-team {
+    padding-top: rem(72px);
+    @include tablets {
+        padding-top: rem(50px);;
+    }
+}
+
 .team {
     display: flex;
     justify-content: center;
     padding: 0 80px;
+
+    @include tablets {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+.team-title {
+    @include tablets {
+        margin-bottom: rem(16px);
+    }
 }
 
 .team__item {
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: space-between;
-    // align-items: center;
+    position: relative;
     width: 220px;
     margin-right: 20px;
     &:last-child {
         margin-right: 0;
     }
+    
+    @include tablets {
+        width: auto;
+        margin-right: 0;
+        margin-bottom: rem(6px);
+    }
 }
 
 .team__member {
     margin-bottom: rem(25px);
+    width: 222px;
+    @include tablets {
+        margin: 0 auto;
+        margin-bottom: rem(20px);
+    }
+}
+
+
+.team--version--desctop {
+    @include tablets {
+        display: none;
+    }
+}
+
+.team--version--desctop.team__content {
+    position: absolute;
+    top: 100%;
+}
+
+.team__content {
+    overflow: hidden;
+    transition: 0.3s;
+    height: 0;
 }
 
 .team__content-block {
@@ -25,39 +71,68 @@
 }
 
 .team__content-text {
-    padding: 0 22%;
+    padding: 0 3%;
+    @include tablets {
+        padding: 0 30%;
+    }
+
+    @include phones {
+        padding: 0 15%;
+    }
 }
 
 
 .team__title {
     display: flex;
-    width: 180px;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
     margin: 0 auto;
-    position: relative;
+    margin-bottom: rem(11px);
     border: none;
     cursor:  pointer;
     background: #fff;
-    text-align: center;
-}
-
-
-.button__text {
-    display: inline-block;
-    width: 100%;
+    font-weight: bold;
+    font-size: rem(18px);
     &::after {
         content: "";
         display: inline-block;
         margin-left: 6px;
         width: 0;
         height: 0;
-        border: 5px solid transparent;
-        border-bottom: 5px solid #E01F3D;
-        // position: absolute;
-        // top: 4%;
-        // right: 5%;
+        transition: .3s;
+        border: 4px solid transparent;
+        border-top: 4px solid #E01F3D;
+        @include tablets {
+            border: 4px solid transparent;
+            border-top: 4px solid #365A49;
+        }
     }
+
+    &:focus {
+        outline: none;
+
+    }
+}
+
+.team__item.active .team__title::after {
+    align-self: center;
+    border: 4px solid transparent;
+    border-bottom: 4px solid #E01F3D;
+    @include tablets {
+        border: 4px solid transparent;
+        border-bottom: 4px solid #365A49;
+    }
+}
+
+.team__occ {
+    margin-bottom: rem(4px);
+    font-weight: bold;
 }
 
 .team--version--mobile {
     display: none;
+    @include tablets {
+        display: block;
+    }
 }

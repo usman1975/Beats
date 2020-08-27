@@ -1,3 +1,58 @@
+.bx-wrapper {
+    box-shadow: none;
+    border: 0;
+    background: transparent;
+} 
+
+.slider {
+    position: relative;
+    width: 100%;
+}
+
+.slider__arrows {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    @include tablets {
+        width: 450px;
+        top: -32%;
+        left: 20%;
+    }
+
+    @include phones {
+        width: 450px;
+        top: -32%;
+        left: 5%;
+    }
+}
+
+.slider__arrow {
+    background: url('../../img/icons/arowright.svg') center center no-repeat;
+    background-size: contain;
+    display: inline-block;
+    width: rem(13px);
+    height: rem(28px);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    &-left {
+        left: -2%;
+        transition: 2s;
+        transform: rotate(180deg) translateY(14px);  
+    }
+
+    &-right {
+        right: 0; 
+        @include phones {
+            right: 10%;
+        }
+    }
+}
+
 .section-slider {
     height: 100vh;
     background: #F8FAF9;
@@ -8,36 +63,6 @@
     padding-top: rem(60px);
     @include tablets {
         padding-top: rem(30px); 
-    }
-}
-
-.slider__left {
-    position: absolute;
-    top: 50%;
-    left: -5%;
-    cursor: pointer;
-    @include tablets {
-        top: 30%;
-        left: 18%;
-    }
-
-    @include phones {
-        left: 5%;
-    }
-}
-
-.slider__right {
-    position: absolute;
-    top: 50%;
-    right: -2%;
-    cursor: pointer;
-    @include tablets {
-        top: 30%;
-        right: 18%;
-    }
-
-    @include phones {
-        right: 5%;
     }
 }
 
@@ -56,8 +81,6 @@
         margin: 0 auto;
     }
 }
-
-
 
 .items__desc {
     width: rem(368px);

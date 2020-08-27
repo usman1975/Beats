@@ -28,3 +28,55 @@ const findBlockByAlias = (alias) => {
     itemToShow.addClass("active").siblings().removeClass("active");
     curItem.addClass("ineractive-avatar-active").siblings().removeClass("ineractive-avatar-active");
   })
+
+const openItem = item => {
+    const container = item.closest('.team__item');
+    const contentBlock = container.find('.team__content');
+    const textBlock = contentBlock.find('.team__content-block');
+    const regHeight = textBlock.height();
+    container.addClass('active');
+    contentBlock.height(regHeight);
+}
+
+const closeEveryItem = container => {
+    const items = container.find('.team__content');
+    const itemContainer = container.find('.team__item');
+    itemContainer.removeClass('active');
+    items.height(0);
+}
+
+  $('.team__title').click(e =>{
+    const $this = $(e.currentTarget);
+    const container = $this.closest('.team');
+    const elemContainer = $this.closest('.team__item');
+
+    if (elemContainer.hasClass("active")) {
+      closeEveryItem(container);
+    } else {
+      closeEveryItem(container);
+      openItem($this);
+    } 
+  })
+
+  const slider = $('.slider__list').bxSlider({
+    pager: false,
+    controls: false
+  });
+
+  $('.slider__arrow-left').click((e) => {
+    e.preventDefault();
+    slider.goToPrevSlide();
+  });
+
+  $('.slider__arrow-right').click((e) => {
+    e.preventDefault();
+    slider.goToNextSlide();
+  });
+
+$('.form').submit(e => {
+  e.preventDefault();
+  $.fancybox.open({
+    src: "#modal",
+    type: "inline"
+  })
+});
