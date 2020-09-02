@@ -6,7 +6,17 @@
 
 .slider {
     position: relative;
-    width: 100%;
+    padding-top: 10%;
+    // width: 100%;
+    // height: 100%;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+}
+
+.section-slider {
+    height: 100vh;
+    min-height: 650px;
 }
 
 .slider__arrows {
@@ -36,9 +46,16 @@
     width: rem(13px);
     height: rem(28px);
     position: absolute;
-    top: 50%;
+    top: 60%;
     transform: translateY(-50%);
     z-index: 10;
+    @include tablets {
+        top: 54%;
+    }
+
+    @include phones {
+        top: 50%;
+    }
     &-left {
         left: -2%;
         transition: 2s;
@@ -61,6 +78,7 @@
 .slider__item {
     position: relative;
     padding-top: rem(60px);
+    margin: auto;
     @include tablets {
         padding-top: rem(30px); 
     }

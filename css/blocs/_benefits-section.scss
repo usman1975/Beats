@@ -1,5 +1,6 @@
 .benefits-section {
     position: relative;
+    height: 100vh;
     &::before {
         content: url("../img/decor/triangle.png");  
         position: absolute;
@@ -10,4 +11,9 @@
             bottom: -19.5%;
         }
     }
+}
+
+.section-container {
+    height: 100%;
+    overflow: hidden;
 }
