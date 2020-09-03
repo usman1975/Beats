@@ -194,6 +194,7 @@ img {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  margin-bottom: 6.25rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -999,6 +1000,7 @@ section {
 #map {
   width: 100%;
   height: 100%;
+  margin-bottom: 1.625rem;
 }
 
 .bx-wrapper {
