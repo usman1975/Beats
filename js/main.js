@@ -283,16 +283,16 @@ $("[data-scroll-to]").click(e => {
 })
 
 // swipe
-$("body").swipe( {
-  swipe:function(
-    event,
-    direction 
-    ) {
-      // const scroller = scrollViewport();
-      let scrollDirection = "";
-      if (direction === "up") {scrollDirection = "next"};
-      if (direction === "down") {scrollDirection = "prev"};
-      console.log(scrollDirection);
-      scrollViewport(scrollDirection);
-    },
-});
+// $("body").swipe( {
+//   swipe:function(
+//     event,
+//     direction 
+//     ) {
+//       // const scroller = scrollViewport();
+//       let scrollDirection = "";
+//       if (direction === "up") {scrollDirection = "next"};
+//       if (direction === "down") {scrollDirection = "prev"};
+//       console.log(scrollDirection);
+//       scrollViewport(scrollDirection);
+//     },
+// });
